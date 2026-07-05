@@ -28,10 +28,10 @@ export default function CylindersPage() {
     const mC = !catFilter || c.cat === catFilter;
     return mQ && mC;
   });
-  const sc = s => s==="Within Limit"?"#15803D":s==="Returned"?"#0F2D54":s==="Overdue"?"#B45309":"#B91C1C";
-  const sb = s => s==="Within Limit"?"#DCFCE7":s==="Returned"?"#E8F0F9":s==="Overdue"?"#FEF3C7":"#FEE2E2";
-  const cc = c => c==="Helium"?"#0B6E5E":c==="Ammonia"?"#B91C1C":c==="Special"?"#0F2D54":"#475569";
-  const cb = c => c==="Helium"?"#E4F5F1":c==="Ammonia"?"#FEE2E2":c==="Special"?"#E8F0F9":"#F1F5F9";
+  const sc = (s: string) => s==="Within Limit"?"#15803D":s==="Returned"?"#0F2D54":s==="Overdue"?"#B45309":"#B91C1C";
+  const sb = (s: string) => s==="Within Limit"?"#DCFCE7":s==="Returned"?"#E8F0F9":s==="Overdue"?"#FEF3C7":"#FEE2E2";
+  const cc = (c: string) => c==="Helium"?"#0B6E5E":c==="Ammonia"?"#B91C1C":c==="Special"?"#0F2D54":"#475569";
+  const cb = (c: string) => c==="Helium"?"#E4F5F1":c==="Ammonia"?"#FEE2E2":c==="Special"?"#E8F0F9":"#F1F5F9";
   const inp = {width:"100%",padding:"9px 14px",border:"1.5px solid #E2E8F0",borderRadius:"8px",fontSize:"13px",outline:"none",color:"#1E293B",backgroundColor:"white"};
   function openEdit(c) { setEditItem(c); setEditForm({...c}); }
   async function saveEdit() {
