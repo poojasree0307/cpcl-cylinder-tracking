@@ -5,7 +5,7 @@ const API = "http://localhost:4000/api";
 export default function CylindersPage() {
   const router = useRouter();
   const [user, setUser] = useState(null as any);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([] as any[]);
   const [search, setSearch] = useState("");
   const [catFilter, setCat] = useState("");
   const [editItem, setEditItem] = useState(null);
