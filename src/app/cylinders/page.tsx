@@ -22,7 +22,7 @@ export default function CylindersPage() {
   }, [router]);
   if (!user) return null;
   const isAdmin = user.role === "admin";
-  const filtered = data.filter(c => {
+  const filtered = data.filter((c: any) => {
     const q = search.toLowerCase();
     const mQ = !q || [c.serial,c.gas,c.supplier,c.dept].join(" ").toLowerCase().includes(q);
     const mC = !catFilter || c.cat === catFilter;
