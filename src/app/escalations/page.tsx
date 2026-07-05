@@ -9,10 +9,10 @@ const ESC = [
 ];
 export default function EscalationsPage() {
   const router = useRouter();
-  const [user, setUser] = useState(null);
-  const [sel, setSel] = useState(null);
-  const [emailPopup, setEmailPopup] = useState(null);
-  const [emailSent, setEmailSent] = useState([]);
+  const [user, setUser] = useState(null as any);
+  const [sel, setSel] = useState(null as any);
+  const [emailPopup, setEmailPopup] = useState(null as any);
+  const [emailSent, setEmailSent] = useState([] as any[]);
   useEffect(() => { const s = localStorage.getItem('cpcl_user'); if (!s) { router.push('/login'); return; } setUser(JSON.parse(s)); }, [router]);
   if (!user) return null;
   const isAdmin = user.role === 'admin';

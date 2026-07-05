@@ -8,8 +8,8 @@ export default function CylindersPage() {
   const [data, setData] = useState([] as any[]);
   const [search, setSearch] = useState("");
   const [catFilter, setCat] = useState("");
-  const [editItem, setEditItem] = useState(null);
-  const [editForm, setEditForm] = useState(null);
+  const [editItem, setEditItem] = useState(null as any);
+  const [editForm, setEditForm] = useState(null as any);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const s = localStorage.getItem("cpcl_user");
